@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 
-@RestController
+@Controller
 @RequestMapping("/")
 public class UsersController {
 
@@ -25,7 +25,7 @@ public class UsersController {
     public String showAllUsers(Model model) {
         List<User> allUsers = userService.getAllUsers();
         model.addAttribute("allUsers", allUsers);
-        return "Users.html";
+        return "Users";
     }
 
     @RequestMapping("new")
